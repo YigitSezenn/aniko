@@ -1,0 +1,125 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: grab;
+}
+
+.stage.preview {
+  width: 210px;
+  height: 340px;
+  margin: 32px auto;
+  overflow: visible;
+  background: transparent;
+}
+
+.character-stage {
+  position: absolute;
+  inset: 0;
+  perspective: 900px;
+  background: transparent;
+}
+
+.character-rig {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  height: 48%;
+  aspect-ratio: 386 / 1100;
+  transform: translateX(-50%);
+  transform-origin: 50% 80%;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+
+.character-rig img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  background: transparent;
+  filter: drop-shadow(0 0 0.6px #fff) drop-shadow(1px 0 0 #fff) drop-shadow(-1px 0 0 #fff)
+    drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 0 #fff);
+}
+
+.eyelid {
+  position: absolute;
+  border-radius: 50%;
+  transform: scaleY(var(--blink, 0.12));
+  transform-origin: 50% 0%;
+  pointer-events: none;
+  opacity: clamp(0, calc((var(--blink, 0.12) - 0.18) * 5), 1);
+}
+
+.mouth {
+  position: absolute;
+  transform: translate(-20%, -20%);
+  pointer-events: none;
+}
+
+.speech-wrap {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  top: 6px;
+  height: 40%;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.speech-bubble {
+  position: relative;
+  max-width: 150px;
+  padding: 6px 9px 7px;
+  background: #fff7fb;
+  color: #3b2a32;
+  border: 2px solid #f2b7c9;
+  border-radius: 12px 12px 12px 5px;
+  box-shadow: 0 4px 10px rgba(80, 32, 54, 0.16);
+  pointer-events: auto;
+}
+
+.speech-bubble p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.35;
+  min-height: 1.35em;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  bottom: -7px;
+  width: 10px;
+  height: 10px;
+  background: #fff7fb;
+  border-right: 2px solid #f2b7c9;
+  border-bottom: 2px solid #f2b7c9;
+  transform: rotate(45deg);
+}
+
+.preview-bar {
+  position: absolute;
+  left: 50%;
+  bottom: -36px;
+  z-index: 4;
+  display: flex;
+  gap: 6px;
+  transform: translateX(-50%);
+}
+
+.preview-bar button {
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #fff7fb;
+  background: #c45a6a;
+  cursor: pointer;
+}

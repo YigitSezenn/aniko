@@ -1,0 +1,4 @@
+[[permission]]
+identifier = "allow-commands"
+description = "Allow Aniko click-through and hit-test commands"
+commands.allow = ["set_clickthrough", "update_hit_regions"]

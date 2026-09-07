@@ -1,0 +1,55 @@
+{
+  "scenes": [
+    {
+      "id": "first_hello",
+      "trigger": "first_run",
+      "lines": [
+        {
+          "text": "Selam! Ben Aniko. Masaüstüne yerleştim bile~",
+          "emotion": "shy",
+          "durationMs": 4200
+        }
+      ]
+    },
+    {
+      "id": "click_shy",
+      "trigger": "click",
+      "lines": [
+        {
+          "text": "O kadar çok tıklama, utandırıyorsun...",
+          "emotion": "shy",
+          "durationMs": 3600
+        }
+      ]
+    },
+    {
+      "id": "idle_there",
+      "trigger": "idle",
+      "lines": [{ "text": "Hâlâ orada mısın?", "emotion": "curious", "durationMs": 3200 }]
+    },
+    {
+      "id": "morning_hi",
+      "trigger": "hour_bucket",
+      "hour": "morning",
+      "lines": [{ "text": "Selam! Ben Aniko. Masaüstüne yerleştim bile~", "emotion": "shy", "durationMs": 4200 }]
+    },
+    {
+      "id": "afternoon_there",
+      "trigger": "hour_bucket",
+      "hour": "afternoon",
+      "lines": [{ "text": "Hâlâ orada mısın?", "emotion": "curious", "durationMs": 3200 }]
+    },
+    {
+      "id": "evening_there",
+      "trigger": "hour_bucket",
+      "hour": "evening",
+      "lines": [{ "text": "Hâlâ orada mısın?", "emotion": "curious", "durationMs": 3200 }]
+    },
+    {
+      "id": "night_there",
+      "trigger": "hour_bucket",
+      "hour": "night",
+      "lines": [{ "text": "Hâlâ orada mısın?", "emotion": "curious", "durationMs": 3200 }]
+    }
+  ]
+}

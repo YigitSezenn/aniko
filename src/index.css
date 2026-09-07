@@ -1,0 +1,28 @@
+:root {
+  color: #3b2a32;
+  font-family: "Segoe UI", "Nunito", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+html.preview-page,
+html.preview-page body,
+html.preview-page #root {
+  background: #120e12 !important;
+}
+
+body {
+  user-select: none;
+}
